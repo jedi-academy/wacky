@@ -1,2 +1,2 @@
 # wacky
-Server for COMP4711 fall 2017
+Testing &amp; deployment server for student projects.
