@@ -5,9 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['menu_choices'] = array(
 	'menudata' => array(
 		array('name' => '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>', 'link' => '/'),
-		array('name' => "Plants", 'link' => '/plants'),
-		array('name' => 'Vault', 'link' => '/vault'),
-		array('name' => 'Parts', 'link' => '/parts'),
+		array('name' => "Airlines", 'link' => '/plants'),
+		array('name' => 'Airports', 'link' => '/vault'),
+		array('name' => 'Aircraft', 'link' => '/parts'),
 		array('name' => 'Bots', 'link' => '/bots'),
 	)
 );
