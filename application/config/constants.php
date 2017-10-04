@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 // RBAC roles
-define('ROLE_PLANT',1);
+define('ROLE_TEAM',1);
 define('ROLE_ADMIN',9);
 define('ROLE_GUEST',0);
 

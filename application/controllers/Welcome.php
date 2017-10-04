@@ -9,41 +9,41 @@ class Welcome extends Application {
 	{
 		$this->data['pagebody'] = 'homepage';
 
-		// plants gauge
-		$total_plants = $this->factories->size();
-		$active_plants = 0;
-		foreach ($this->factories->all() as $record)
+		// airlines gauge
+		$total_airlines = $this->teams->size();
+		$active_airlines = 0;
+		foreach ($this->teams->all() as $record)
 			if ($record->org != null)
-				$active_plants++;
-		$this->data['plants'] = $this->metric('Active Plants', $active_plants, 'primary', 'industry', '/plants', $total_plants . ' plants licensed');
+				$active_airlines++;
+		$this->data['airlines'] = $this->metric('Active Airlines', $active_airlines, 'primary', 'plane', '/#', $total_airlines . ' airlines licensed');
 
-		// parts gauge
-		$total_certs = $this->parts->size();
-		$making_plants = 0;
-		foreach ($this->stats->all() as $record)
-			if (!empty($record->making))
-				$making_plants++;
-		$this->data['parts'] = $this->metric('Certified parts in stock', $total_certs, 'success', 'cubes', '/production/parts', $making_plants . ' factories involved');
+		// airports gauge
+		$total_airports = $this->airports->size();
+		$active_airports = 0;
+//		foreach ($this->stats->all() as $record)
+//			if (!empty($record->making))
+//				$active_airlines++;
+		$this->data['airports'] = $this->metric('Active Airports', $active_airports, 'success', 'send', '/#', $total_airports . ' airports operational');
 
-		// builds gauge
-		$this->data['builds'] = $this->metric('Bots built', $this->boblog->size(), 'warning', 'child', '/production/bots');
+		// flights gauge
+		$this->data['flights'] = $this->metric('Flights scheduled', 0, 'warning', 'suitcase', '/#');
 
 		// greed gauge
-		$this->data['bucks'] = $this->metric('Greed meter', $this->stats->profit(), 'danger', 'dollar', '/production/greed');
+		$this->data['bucks'] = $this->metric('Greed meter', 0, 'danger', 'dollar', '/#');
 
-		// bots breakdown donut chart
-		$this->caboose->needed('morris', 'morris-donut-chart');
-		$parms = ['donuts' => $this->boblog->breakout(), 'field' => 'morris-donut-chart'];
-		$this->data['donutchart'] = $this->parser->parse('donutchart', $parms, true);
-		$this->data['zzz'] = $this->parser->parse('_components/morris-data', $parms, true);
-
-		// tasks activity panel
-		$parms['activities'] = $this->activity->latest();
-		$this->data['tasks'] = $this->parser->parse('tasks', $parms, true);
-
-		// transactions history panel
-		$parms['details'] = $this->history->latest();
-		$this->data['transactions'] = $this->parser->parse('transactions', $parms, true);
+//		// bots breakdown donut chart
+//		$this->caboose->needed('morris', 'morris-donut-chart');
+//		$parms = ['donuts' => $this->boblog->breakout(), 'field' => 'morris-donut-chart'];
+//		$this->data['donutchart'] = $this->parser->parse('donutchart', $parms, true);
+//		$this->data['zzz'] = $this->parser->parse('_components/morris-data', $parms, true);
+//
+//		// tasks activity panel
+//		$parms['activities'] = $this->activity->latest();
+//		$this->data['tasks'] = $this->parser->parse('tasks', $parms, true);
+//
+//		// transactions history panel
+//		$parms['details'] = $this->history->latest();
+//		$this->data['transactions'] = $this->parser->parse('transactions', $parms, true);
 
 		$this->render();
 	}

@@ -9,14 +9,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 ?>
 <div class="row">
-	{plants}
-	{parts}
-	{builds}
+	{airlines}
+	{airports}
+	{flights}
 	{bucks}
 </div>
 
-<div class="row">
+<!-- <div class="row">
 	{donutchart}
 	{tasks}
 	{transactions}
-</div>
+</div> -->

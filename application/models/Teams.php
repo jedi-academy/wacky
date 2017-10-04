@@ -1,11 +1,11 @@
 <?php
 
-class Factories extends MY_Model {
+class Teams extends MY_Model {
 
 	// constructor
 	function __construct()
 	{
-		parent::__construct('factories', 'id');
+		parent::__construct('teams', 'id');
 	}
 
 	// look for a specific repo

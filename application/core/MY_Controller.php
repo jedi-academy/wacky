@@ -24,8 +24,8 @@ class Application extends CI_Controller {
 
 		//  Set basic view parameters
 		$this->data = array();
-		$this->data['pagetitle'] = 'Umbrella Corp - Life Is Our Business';
-		$this->data['title'] = 'Panda Research Center';
+		$this->data['pagetitle'] = 'Western Airlines Consortium - Knowledge Yielder (WACKY)';
+		$this->data['title'] = 'Western Airlines Consortium';
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '';
 
 		// login scoop?
@@ -39,12 +39,12 @@ class Application extends CI_Controller {
 		$this->data['alerts'] = '';
 		$this->error_free = TRUE;
 			
-		// was a PRC session token provided?
+		// was a WAC session token provided?
 		$this->trader = NULL;
 		$this->token = $this->input->get('key');
 		if (!empty($this->token)) {
-			$prc_session = $this->trading->get($this->token);
-			$this->trader = empty($prc_session) ? '' : $prc_session->factory;
+			$wac_session = $this->trading->get($this->token);
+			$this->trader = empty($wac_session) ? '' : $wac_session->factory;
 		}
 	}
 

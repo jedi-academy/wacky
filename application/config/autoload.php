@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -59,7 +58,7 @@ $autoload['packages'] = array(APPPATH . 'third_party/caboose/');
   |
   |	$autoload['libraries'] = array('user_agent' => 'ua');
  */
-$autoload['libraries'] = array('parser', 'caboose', 'database', 'session', 
+$autoload['libraries'] = array('parser', 'caboose', 'database', 'session',
 	'parsedown');
 
 /*
@@ -134,5 +133,4 @@ $autoload['language'] = array();
   |
   |	$autoload['model'] = array('first_model' => 'first');
  */
-$autoload['model'] = array('factories', 'stats', 'series', 'properties', 
-	'parts', 'history', 'activity', 'trading', 'boblog');
+$autoload['model'] = array('teams', 'airports', 'airlines', 'airplanes', 'regions', 'properties');
