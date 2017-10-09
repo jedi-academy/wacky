@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Webhook endpoint to trigger deployment
+ * Silly bit to generate random hashes to prime team passwords
  */
 class Secret extends CI_Controller {
 

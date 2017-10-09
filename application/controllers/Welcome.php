@@ -15,7 +15,7 @@ class Welcome extends Application {
 		foreach ($this->teams->all() as $record)
 			if ($record->org != null)
 				$active_airlines++;
-		$this->data['airlines'] = $this->metric('Active Airlines', $active_airlines, 'primary', 'plane', '/#', $total_airlines . ' airlines licensed');
+		$this->data['airlines'] = $this->metric('Active Airlines', $active_airlines, 'primary', 'plane', '/members', $total_airlines . ' airlines licensed');
 
 		// airports gauge
 		$total_airports = $this->airports->size();

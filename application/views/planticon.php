@@ -1,1 +1,0 @@
-<span><i class="fa fa-plane fa-3x text-muted"></i></span>

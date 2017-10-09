@@ -12,11 +12,8 @@
 	</div>
 	<div class='col-md-3'>
 		<h3>Performance</h3>
-		<div>Net worth: <span class='pull-right'>{balance}</span></div>
-		<div>Boxes bought: <span class='pull-right'>{boxes_bought}</span></div>
-		<div>Parts returned: <span class='pull-right'>{parts_returned}</span></div>
-		<div>Parts made: <span class='pull-right'>{parts_made}</span></div>
-		<div>Bots built: <span class='pull-right'>{bots_built}</span></div>
+		<div>Fleet: <span class='pull-right'>{fleet_size}</span></div>
+		<div>Flights scheduled: <span class='pull-right'>{flights_scheduled}</span></div>
 	</div>
 </div>
 <a href="{previous_view}" type="button" class="btn btn-success">Back to Previous View</a>
